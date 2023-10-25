@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+	margin: 0;
+	/* padding: 0; */
+	box-sizing: border-box;
+	background-color: black;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+.offset::before {
+	display: block;
+	content: "";
+	/* height: 1rem; */
+	/* margin-top: -2rem; */
+}
+a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.7rem;
+}
+
+li {
+	list-style: none;
+}
+
+/* upper bar csss */
+/* Discount bar styles (assuming it should also be responsive) */
+
+/* Navbar styles */
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 4rem;
+	width: 100%;
+
+	transition: all 0.5s ease;
+	justify-content: left;
+}
+.nav .scrolled {
+	background-color: white !important;
+	transition: background-color 200ms linear;
+	box-shadow: 7rem 10rem 15rem rgba(0, 0, 0, 0.3);
+}
+
+.nav ul li a:after {
+	content: "";
+
+	height: 3%;
+
+	transition: 0.3s;
+}
+
+.nav ul li a:hover {
+	color: #ffffff;
+}
+
+.nav ul li a:hover:after {
+	width: 0.1%;
+}
+
+.nav .menu-bar .menu-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav .menu-bar .menu-item li {
+	margin: 5px 30px;
+}
+
+.nav .menu-bar .menu-item li a {
+	color: #f0f7f3;
+	font-size: 2vh;
+	font-weight: 60;
+}
+
+.nav .menu-bar .menu-item li a:hover {
+	color: #56d858;
+}
+
+.nav .nav-social ul li a {
+	font-size: 12px;
+	color: #56d858;
+}
+/* .nav img {
+	height: 100vh;
+	width: 100vh;
+} */
+/* Basic button styles */
+
+@media (max-width: 768px) {
+	.nav {
+		padding: 1%; /* Adjust the padding for smaller screens */
+	}
+
+	.menu-bar {
+		cursor: pointer;
+	}
+
+	.menu-bar .menu-item {
+		flex-direction: column;
+
+		background: #21201e;
+		display: none;
+	}
+
+	.nav.active .menu-bar .menu-item {
+		display: flex;
+	}
+
+	.nav .menu-bar .menu-item li {
+		margin: 0px;
+		padding: 1% 5%;
+	}
+	.nav .menu-bar .menu-item li a {
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+
+	.nav .custom-button,
+	.nav .signb {
+		margin-top: 10%;
+	}
+
+	.buttons-container {
+		display: flex;
+		justify-content: flex-end; /* Align buttons to the right */
+		align-items: center; /* Center vertically within the container */
+		padding: 1px, 2px, 2px; /* Add padding for spacing */
+		/* Set background color */
+	}
+
+	.button-group {
+		margin-left: 100px;
+	}
+	.getAdvFeatures {
+		font-size: 1rem;
+		color: transparent; /* Set text color to transparent */
+		margin: 0 30px;
+		padding: 0;
+		margin-left: 60vh;
+		background-image: linear-gradient(90deg, #56d858, white); /* Define the gradient */
+		background-clip: text; /* Apply the gradient only to the text */
+		-webkit-background-clip: text; /* For Safari compatibility */
+		-webkit-text-fill-color: transparent;
+		cursor: pointer;
+	}
+	.signb,
+	.custom-button {
+		font-size: 14px;
+		color: #56d858;
+		background-color: #56d858;
+		border-color: #56d858;
+		border: 0.1rem solid #56d858;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		position: relative; /* Required for pseudo-elements */
+		overflow: hidden; /* Hide overflowing shine */
+	}
+
+	/* Add the white shine as a pseudo-element */
+
+	.signb::before,
+	.custom-button::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -100%; /* Start the shine off-screen */
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, white, transparent); /* Define the gradient */
+		transform: skewX(-20deg); /* Add skew to the shine */
+		opacity: 0;
+		transition: left 0.5s ease, opacity 0.5s ease; /* Transition the left position and opacity */
+	}
+
+	/* Button hover effect */
+
+	.signb:hover::before,
+	.custom-button:hover::before {
+		left: 100%; /* Move the shine to the right */
+		opacity: 1;
+	}
+	.login:hover {
+		background-color: #56d858;
+		border-color: #56d858;
+	}
+
+	.login {
+		font-size: 14px;
+		color: #eef2ee;
+		background-color: #0a0a0a;
+
+		border: 0.1rem solid #56d858;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+	.claim-button:hover {
+		background-color: #56d858;
+		border-color: #56d858;
+	}
+
+	.claim-button {
+		color: #eef2ee;
+		background-color: #0a0a0a;
+
+		border: 0.1rem solid #56d858;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	/* for the menu dashbopard and sign up button style*/
+
+	.dash-buttons {
+		display: flex;
+		margin-left: 20%;
+		align-items: center;
+	}
+	.claim-button,
+	.signb,
+	.login,
+	.custom-button {
+		margin-right: 5px; /* Adjust this value as needed */
+		padding: 10px 20px;
+
+		color: #fff;
+		border-radius: 5px;
+		text-decoration: none;
+	}
+
+	@media (max-width: 768px) {
+		.dash-buttons {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.custom-button,
+		.signb {
+			margin-top: 2%;
+		}
+	}
+
+	/* Mobile and tablet responsiveness */
+	@media (max-width: 768px) {
+		.signb {
+			padding: 8% 15%; /* Adjust padding for smaller screens */
+			margin-left: 5%; /* Adjust margin for smaller screens */
+		}
+
+		/* Additional adjustments if needed */
+	}
+
+	@media (max-width: 768px) {
+		.nav {
+			padding: 1%; /* Adjust the padding for smaller screens */
+		}
+
+		.menu-bar {
+			cursor: pointer;
+		}
+
+		.menu-bar .menu-item {
+			flex-direction: column;
+
+			background: #21201e;
+			display: none;
+		}
+
+		.nav.active .menu-bar .menu-item {
+			display: flex;
+		}
+
+		.nav .menu-bar .menu-item li {
+			margin: 0px;
+			padding: 1% 5%;
+		}
+		.nav .menu-bar .menu-item li a {
+			margin-left: 0px;
+			padding-left: 0px;
+		}
+
+		.nav .custom-button,
+		.nav .signb {
+			margin-top: 10%;
+		}
+		@media (max-width: 768px) {
+			.nav .custom-button,
+			.nav .signb {
+				margin-top: 2%; /* Adjust the percentage value for smaller screens */
+			}
+
+			/* Additional adjustments if needed */
+		}
+
+		/* Hide buttons when screen height is less than 500px */
+		@media (max-height: 1300px) {
+			.nav .menu-bar .menu-item li,
+			.nav .custom-button,
+			.nav .signb {
+				display: none;
+			}
+		}
+	}
+
+	.buttons-container {
+		display: flex;
+		justify-content: flex-end; /* Align items to the right */
+	}
+
+	.button-group {
+		display: flex;
+		align-items: center;
+		margin-left: 10px; /* Add margin between button groups */
+	}
+
+	.divider {
+		margin: 0 5px;
+		color: white;
+	}
+
+	.local-time {
+		display: flex;
+		align-items: center;
+		font-family: Orbitron;
+		color: white;
+	}
+
+	.time-label {
+		margin-right: 0.5rem;
+	}
+
+	/*for the stiky side bar*/
+
+	.sidebar {
+		position: fixed;
+		top: 0;
+		left: -250px; /* Initially hide the sidebar */
+		width: 300px;
+		height: 100%;
+		background-color: #333;
+		color: white;
+		transition: left 0.3s ease;
+		z-index: 999;
+	}
+
+	.menu-sidebar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* Vertically center the items */
+		align-items: center; /* Horizontally center the items */
+		height: 100%; /* Make sure the sidebar has full height */
+		background-color: #333;
+		color: white;
+		transition: left 0.3s ease;
+		z-index: 999;
+		padding: 20px;
+	}
+	.menu-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.menu-sidebar ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.menu-list li {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	.menu-list li a {
+		text-decoration: none;
+		color: white; /* Adjust the text color as needed */
+		display: flex;
+		align-items: center;
+	}
+
+	.menu-sidebar li i {
+		margin-right: 10px;
+	}
+
+	.menu-sidebar li span {
+		display: none; /* Hide the text by default */
+	}
+
+	.toggle-btn {
+		position: absolute;
+		top: 20px;
+		left: 260px;
+		cursor: pointer;
+	}
+
+	.bar {
+		display: block;
+		width: 30px;
+		height: 4px;
+		margin: 6px 0;
+		background-color: white;
+		transition: transform 0.3s ease;
+	}
+
+	.sidebar.open {
+		left: 0; /* Show the sidebar */
+	}
+
+	.sidebar.open .menu-sidebar li span {
+		display: inline; /* Show text when sidebar is open */
+	}
+	.toggle-btn .cross-bar {
+		display: none;
+	}
+
+	.sidebar.open .toggle-btn .bar {
+		transform: rotate(-45deg) translate(-2px, -2px);
+		background-color: rgb(85, 184, 15);
+	}
+
+	.sidebar.open .toggle-btn .cross-bar {
+		display: block;
+		transform: rotate(45deg) translate(-2px, -2px);
+		background-color: rgb(85, 184, 15);
+	}
+	.menu-text {
+		display: inline-block;
+		margin-left: 4px; /* Add spacing between icon and text */
+	}
+
+	/* ticker  part */
+
+	/* Style for the ticker section */
+	.ticker-section {
+		background-color: #333;
+		color: white;
+		padding: 5px 0;
+		overflow: hidden;
+	}
+
+	/* Style for the ticker container */
+	.ticker {
+		overflow: hidden;
+		white-space: nowrap;
+		display: flex;
+		animation: tickerScroll linear infinite; /* Adjust speed as needed */
+	}
+
+	@media (max-width: 768px) {
+	}
+	/* Animation for scrolling the ticker */
+	@keyframes tickerScroll {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+	.ticker-container {
+		overflow: hidden;
+		position: relative;
+		white-space: nowrap; /* Prevent line breaks */
+	}
+
+	/* Style for the ticker list items */
+	.ticker-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: inline-block; /* Display the list items horizontally */
+		animation: tickerScroll 20s linear infinite;
+	}
+
+	.ticker-list li {
+		display: inline;
+		margin-right: 20px; /* Add spacing between ticker items */
+		padding: 10px; /* Add padding for better visibility */
+		border-bottom: 2px solid transparent; /* Add a border line between items */
+		transition: border-color 0.3s;
+	}
+
+	@media (max-width: 768px) {
+		/* Style for the ticker container */
+		.ticker-section {
+			height: 15px;
+		}
+		.ticker {
+			overflow: hidden;
+			white-space: nowrap;
+			display: flex;
+			animation: tickerScroll linear infinite; /* Adjust speed as needed */
+		}
+
+		/* Animation for scrolling the ticker */
+		@keyframes tickerScroll {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+		.ticker-container {
+			overflow: hidden;
+			position: relative;
+			white-space: nowrap;
+			font-size: 2px;
+			/* Prevent line breaks */
+		}
+
+		/* Style for the ticker list items */
+		.ticker-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block; /* Display the list items horizontally */
+			animation: tickerScroll 20s linear infinite;
+			font-size: 2px;
+		}
+
+		.ticker-list li {
+			display: inline;
+			margin-right: 20px; /* Add spacing between ticker items */
+			padding: 10px; /* Add padding for better visibility */
+			border-bottom: 2px solid transparent; /* Add a border line between items */
+			transition: border-color 0.3s;
+		}
+	}
+
+	/* Style for header 2 */
+	.main-header {
+		background-color: black;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 20px;
+		height: 100px;
+	}
+
+	.header-bar {
+		display: flex;
+		align-items: center;
+	}
+
+	.header-item {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 5px;
+	}
+
+	.header-item li a {
+		text-decoration: none;
+		color: rgb(189, 187, 187);
+		position: relative; /* Add this */
+		font-size: 16px;
+		margin-left: 100px;
+		transition: color 0.3s;
+	}
+	.header-item li a:hover {
+		color: rgb(255, 255, 255); /* Change color on hover */
+	}
+	.header-item li a:hover::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -20px; /* Adjust the distance of the line from text */
+		width: 100%;
+		height: 1.5px;
+		background-color: rgb(128, 237, 88);
+	}
+	.edit-buttons {
+		display: flex;
+
+		gap: 10px;
+	}
+
+	.side-buttons {
+	}
+
+	.edit-button,
+	.refresh {
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+		padding: 5px 10px;
+		border: 1px solid rgb(86, 245, 105);
+		border-radius: 5px;
+		display: inline-block;
+		text-align: center;
+		font-size: 16px;
+	}
+
+	.divider2 {
+		width: 100%;
+		height: 1px;
+		background-color: rgb(245, 242, 242);
+		margin-top: -20px;
+	}
+
+	@media (max-width: 768px) {
+		.main-header {
+			background-color: black;
+			display: flex;
+			flex-direction: row; /* Change to column on smaller screens */
+			align-items: center;
+			padding: 10px 2px;
+			height: auto; /* Change height to auto for smaller screens */
+		}
+
+		.header-bar {
+			display: flex;
+			flex-direction: row; /* Change to column on smaller screens */
+			align-items: center;
+			margin-bottom: -5px; /* Add margin to separate items */
+		}
+
+		.header-item {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: row; /* Change to column on smaller screens */
+			gap: 5px;
+			margin-left: 60px;
+		}
+
+		.header-item li a {
+			text-decoration: none;
+			color: rgb(189, 187, 187);
+			position: relative;
+			font-size: 10px;
+			margin: 0; /* Remove left margin */
+			text-align: center; /* Center text */
+			transition: color 0.3s;
+		}
+		.header-item li a:hover {
+			color: rgb(255, 255, 255);
+		}
+		.header-item li a:hover::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -1px; /* Adjust the distance of the line from text for smaller screens */
+			width: 100%;
+			height: 1.5px;
+			background-color: rgb(128, 237, 88);
+		}
+
+		.edit-buttons {
+			display: flex;
+			flex-direction: row; /* Change to column on smaller screens */
+			align-items: center;
+			gap: 0px;
+			margin-top: 5px; /* Add margin to separate items */
+		}
+
+		.side-buttons {
+			display: flex;
+			flex-direction: row; /* Change to column on smaller screens */
+			align-items: center;
+		}
+
+		.edit-button,
+		.refresh {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			padding: 5px 10px;
+			border: 1px solid rgb(86, 245, 105);
+			border-radius: 5px;
+			display: inline-block;
+			text-align: center;
+			font-size: 6px;
+		}
+
+		.edit-buttons2 {
+			display: flex;
+			flex-direction: row; /* Change to column on smaller screens */
+			align-items: center;
+			gap: 0px;
+			margin-top: 5px;
+			border: 1px solid rgb(86, 245, 105); /* Add a border with 1px width and gray color */
+			padding: 10px; /* Add margin to separate items */
+		}
+
+		.side-buttons2 {
+			display: flex;
+			flex-direction: row; /* Change to column on smaller screens */
+			align-items: center;
+			border: 1px solid rgb(86, 245, 105);
+		}
+
+		.edit-button2 {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			padding: 5px 10px;
+
+			border-radius: 5px;
+			display: inline-block;
+			text-align: center;
+			font-size: 6px;
+			border: 1px solid gray; /* Add a border with 1px width and gray color */
+			padding: 10px;
+		}
+
+		.info-section {
+			display: flex;
+			background-color: black;
+			padding: 20px;
+		}
+
+		.major-div {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-right: 20px;
+		}
+
+		.search1 {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+
+		.search2 {
+		}
+
+		.search1,
+		.search {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			padding: 5px 10px;
+			border: 1px solid rgb(86, 245, 105);
+			border-radius: 5px;
+			display: inline-block;
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: white;
+	border: 1px solid #ccc;
+	display: none;
+}
+
+.dropdown-menu.show {
+	display: block;
+}
+
+.dropdown-item {
+	display: block;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: #333;
+}
+
+.dropdown-item:hover {
+	background-color: #f8f8f8;
+}

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.2" />
+		<title>Alpha Trade | Professional Trainning Made Easy</title>
+		<link rel="icon" type="image/png" href="./images/favicon.png" />
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+
+	<body>
+		<div class="discount-bar">
+			<p class="d-text">Use Code <strong>MDX50</strong> For 50% Off Your First Payment</p>
+		</div>
+		<section id="wrapper">
+			<!-- Navbar Section -->
+			<section id="navbar" class="navbar offset">
+				<div class="nav">
+					<a href="#navbar">
+						<img src="./images/logo.png" alt="" />
+					</a>
+					<div class="menu-bar">
+						<ul class="menu-item">
+							<li><a href="#About">About</a></li>
+							<li><a href="#testimonials">Testimonials</a></li>
+							<li><a href="#pricing">Pricing</a></li>
+							<li><a href="#Feature">Feature</a></li>
+						</ul>
+					</div>
+					<div class="dash-buttons">
+						<a href="./dashboard/Charts/charts.html" class="custom-button"
+							><i class="fa-regular fa-square-check" style="font-size: 15px"></i> Dashboard Login</a
+						>
+						<a href="./dashboard/Charts/charts.html" class="signb">Sign Up</a>
+					</div>
+				</div>
+				<section class="ticker-section">
+					<div class="ticker">
+						<div class="ticker container">
+							<ul class="ticker-list">
+								<li>
+									<img src="images/bitcoin.png" style="height: 30px; width: 20px; margin-right: 10px" />BTC : $23611.59
+								</li>
+								<li>
+									<img src="images/binance.png" style="height: 20px; width: 20px; margin-right: 10px" />BNB : $292.00
+								</li>
+								<li>
+									<img src="images/tether.png" style="height: 20px; width: 20px; margin-right: 10px" />ADA : $0.28
+								</li>
+								<li>
+									<img src="images/dogecoin.png" style="height: 20px; width: 20px; margin-right: 10px" />DOGE : $0.07
+								</li>
+								<li>
+									<img src="images/ethereum.png" style="height: 20px; width: 20px; margin-right: 10px" />ETH : $1892.59
+								</li>
+								<li>
+									<img src="images/digital.png" style="height: 20px; width: 20px; margin-right: 10px" />LTC : $79.47
+								</li>
+							</ul>
+						</div>
+					</div>
+					<script>
+						const tickerContainer = document.querySelector(".ticker-container");
+						const tickerList = document.querySelector(".ticker-list");
+
+						tickerList.innerHTML += tickerList.innerHTML; // Duplicate the ticker items
+
+						// Measure the total width of the ticker items
+						const totalWidth = tickerList.offsetWidth;
+
+						// Set the width of the ticker container
+						tickerContainer.style.width = `${totalWidth}px`;
+					</script>
+				</section>
+			</section>
+			<!-- Hero  Section -->
+
+			<section id="hero" class="hero offset">
+				<div class="hero-part">
+					<h1>
+						<strong>Highly Accurate Trading </strong><br />
+						<strong> Just Got Easier. </strong>
+					</h1>
+					<h2>
+						instant access to all our Industry Leading Tradingvew <br />
+						Indicators, accessible Support like no others, highly <br />Profitable auto trading bots, eleminate
+						complexity<br />
+						complexity and bring forward simplicity
+					</h2>
+					<div class="button-part">
+						<button class="hero-button">Sign Up and Get 10% Off</button>
+						<p><i class="fa-sharp fa-regular fa-circle-play" style="padding: 5px 5px"></i>Live Demo</p>
+					</div>
+					<div class="hero-ltext">
+						<i class="fa-regular fa-circle-check" style="color: #56d858; padding: 14px 5px"></i>
+						<p>2.5k + members</p>
+						<i class="fa-regular fa-circle-check" style="color: #56d858; padding: 14px 5px"></i>
+						<p>Auto Bot Trading</p>
+						<i class="fa-regular fa-circle-check" style="color: #56d858; padding: 14px 5px"></i>
+						<p>#1 trading view Indicators</p>
+					</div>
+					<hr class="custom-hr" />
+					<div class="img-part">
+						<img src="./images/Homepage2.png" alt="" />
+					</div>
+				</div>
+
+				<div class="platform-section">
+					<h1>OUR PLATFORM</h1>
+					<h2>Become Consistently Profitable</h2>
+					<div class="img-video">
+						<img src="./images/second-img.jpg" alt="" />
+						<iframe
+							class="video"
+							width="550"
+							height="400"
+							src="https://www.youtube.com/embed/mQvw5JXXnrQ"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen
+							style="margin-left: 10px"
+						></iframe>
+					</div>
+					<p>“It's like being given a walk-through guide to a game. You just have to execute." - MG</p>
+					<h3>
+						Your All-In-One Platform To Becoming <br />
+						Professional, Profitable, Consistent
+					</h3>
+					<div class="platform-list">
+						<i class="platform-icon" class="fa-regular fa-circle-check" style="color: #fff"></i>
+						<p>Use advanced TradingView algorithms</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Join an exclusive VIP Traders Network</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Connect with pro-traders 24/7</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Join up to 10 coaching sessions per week</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Access a 25-lesson trading course</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Benefit from next-gen trading bots</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Learn from a 15k-strong community</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Earn free crypto as an Affiliate</p>
+						<i class="fa-regular fa-circle-check"></i>
+					</div>
+				</div>
+			</section>
+
+			<!-- Testimonial Section -->
+			<section id="testimonials" class="testimonials offset">
+				<div class="testimonial-part">
+					<h1>TESTIMONIALS</h1>
+					<h2>15,000+ Members Trust Us</h2>
+					<div class="card-container">
+						<div class="test-card">
+							<img src="./images/istcard.jpg" alt="Circular Image" />
+							<p>Kiran Robbin</p>
+							Member since May 2022
+							<div class="review">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<p>
+								I have been a trader for 3-4 yrs but I <br />
+								feel the indicators really make the transition to newcomers and advanced traders to Technical analysis.
+								Very effective for short term scalping and long term time frames!
+							</p>
+						</div>
+						<div class="test-card">
+							<img src="./images/2nd card.jpg" alt="Circular Image" />
+							<p>Stock Poker</p>
+							Member since Octobor 2021
+							<div class="review">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<p>
+								MDX suite really speaks to me and how I <br />
+								integrate indicators with TA. My win rate <br />has gone up substantially since using Alpha Trade suite.
+								Information is crispy and clean,and especially the oscillators. <br />
+								Oscillators are mad scientists genius!
+							</p>
+						</div>
+						<div class="test-card">
+							<img src="./images/3rd card.jpg" alt="Circular Image" />
+							<p>Nickolas Olenik</p>
+							Member since December 2021
+							<div class="review">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<p>
+								Alpha Trade is like using a cheat code on the charts for understanding the momentum and direction in
+								which the market is moving. The indicators make a trader's life easier.
+							</p>
+						</div>
+					</div>
+					<div class="logo-sec">
+						<p>Yahoo! <br />finance</p>
+						<p>Buisnss <br />Insider</p>
+						<p>
+							Digital <br />
+							Journal
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- Feature section -->
+			<section id="Feature" class="Feature offset">
+				<div class="feature-part">
+					<h1>What Is Alpha Trade?</h1>
+					<p>
+						Alpha Trade is a sophisticated toolkit designed to support traders in their <br />
+						pursuit of consistent profitability and professional trading. Our platform is <br />specifically engineered
+						with one fundamental goal in mind: to either initiate <br />
+						your profitability or substantially enhance your existing profits.
+					</p>
+				</div>
+				<div class="flex-part">
+					<div class="text-f">
+						<h1>
+							Advanced <br />
+							Tradingview <br />
+							Algos & Indicators
+						</h1>
+						<p>
+							Revolutionize your trading approach with our cutting-edge <br />
+							Tradingview algorithms & indicators with buy & sell alerts. These <br />
+							tools are designed to significantly enhance your win-rate in any <br />
+							market.
+						</p>
+						<div class="image-container">
+							<img src="./images/text1.jpg" id="comment-img" alt="" />
+							<img src="./text2.webp" alt="" />
+						</div>
+					</div>
+					<div class="f-img">
+						<img src="./images/1.jpg" alt="" />
+					</div>
+				</div>
+				<div class="flex-part1">
+					<div class="f-img1">
+						<img src="./images/3.webp" alt="" />
+					</div>
+
+					<div class="text-f">
+						<h1>
+							Join Our<br />
+							Professional VIP <br />
+							Algos & Indicators
+						</h1>
+						<p>
+							The Exclusive VIP Traders Network has 10+ professional traders <br />
+							available 24/7, watch live trade setups, live chart analysis <br />
+							and reach out to our friendly support team.
+						</p>
+						<div class="cm-img">
+							<img src="./images/Screenshot_33.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="flex-part">
+					<div class="text-f">
+						<h1>
+							Access Our <br />
+							Academy & <br />
+							Trading Courses
+						</h1>
+						<p>
+							Expand your market expertise with our all-encompassing trading <br />
+							courses and live trading sessions. Delivered daily to our Academy, these <br />resources provide
+							invaluable insights and hands-on experience, <br />
+							empowering you to trade with confidence, precision, and a depth of <br />
+							understanding that sets you apart in the financial landscape.
+						</p>
+					</div>
+					<div class="f-img">
+						<img src="./images/10.webp" alt="" />
+					</div>
+				</div>
+				<div class="flex-part1">
+					<div class="fn-img">
+						<img src="./images/11.webp" alt="" />
+					</div>
+
+					<div class="text-f">
+						<h1>
+							Watch Live<br />
+							Professional <br />
+							Trading Sessions <br />Daily
+						</h1>
+						<p>
+							Gain immediate access to 7-10 professional coaching sessions per <br />
+							week, covering a range of topics from trading psychology to risk <br />
+							management. Feel free to ask experienced traders with decades of <br />
+							expertise any questions you may have.
+						</p>
+					</div>
+				</div>
+				<div class="flex-part">
+					<div class="text-f">
+						<h1>
+							Fully-Automated<br />
+							Trading Bots
+						</h1>
+						<p>
+							Use our recommended third party trading system that outperforms the <br />
+							BTC/USDT trading pair through complete automation on medium to <br />long-term timeframes. Simply relax
+							and enjoy the benefits of this<br />
+							advanced trading solution.
+						</p>
+						<div>
+							<img class="ff-img" src="./images/13.webp" alt="" />
+						</div>
+					</div>
+					<div class="f-img">
+						<img src="./images/12.webp" alt="" />
+					</div>
+				</div>
+				<div class="flex-part" style="color: #111110">
+					<div class="text-f">
+						<h1>
+							The One-Of-A-<br />
+							Kind Legendboard
+						</h1>
+						<p>
+							The #1 opportunity to win prizes and earn crypto. Pick altcoins and <br />
+							projects you think will do well. If they do, you’ll win prizes within the <br />community.
+						</p>
+						<div>
+							<img class="nn-img" src="./images/15.webp" alt="" />
+						</div>
+					</div>
+					<div class="f-img">
+						<img src="./images/16.webp" alt="" />
+					</div>
+				</div>
+				<div class="flex-part1">
+					<div>
+						<img class="mm-img" src="./images/17.webp" alt="" />
+					</div>
+
+					<div class="text-f">
+						<h1>
+							All-In-One<br />
+							Dashboard <br />
+						</h1>
+						<p>
+							Enhance your decision-making process with our comprehensive all- <br />on-one dashboard, providing you
+							with intuitive metrics, data, and <br />
+							insights into the markets. Our tools empower you to navigate the <br />
+							financial landscape with confidence and precision, positioning you for <br />
+							success in an ever-changing environment.
+						</p>
+					</div>
+				</div>
+				<div class="platform-section2">
+					<h3>Your All-In-One Toolkit</h3>
+					<div class="platform-list2">
+						<!-- <i class="platform-icon" class="fa-regular fa-circle-check" style="color: #56D858;;"></i> -->
+						<p>Use advanced TradingView algorithms</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Join an exclusive VIP Traders Network</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Connect with pro-traders 24/7</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Join up to 10 coaching sessions per week</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Access a 25-lesson trading course</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Benefit from next-gen trading bots</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Learn from a 15k-strong community</p>
+						<i class="fa-regular fa-circle-check"></i>
+						<p>Earn free crypto as an Affiliate</p>
+						<i class="fa-regular fa-circle-check"></i>
+					</div>
+					<div class="dis-b">
+						<button class="dis-b1">Join 50% Off</button>
+						<h1>Use Code <strong> MDX50 </strong> For 50% Off Your First Payment</h1>
+						<button class="dis-b2">Select Membership</button>
+					</div>
+					<div class="flex-part3">
+						<div class="f-img">
+							<img class="img-1" src="./19.webp" alt="" />
+							<div class="sec-part">
+								<img class="img-2" src="./20.webp" alt="" />
+								<img class="img-3" src="./21.webp" alt="" />
+							</div>
+							<h1>"Very impressive website with lots of utilities. I fully recommend it!" - SP</h1>
+						</div>
+
+						<div class="text-f2">
+							<img class="img-4" src="./22.webp" alt="" />
+							<img class="img-5" src="./23.webp" alt="" />
+							<div>
+								<img class="img-6" src="./24.webp" alt="" />
+							</div>
+						</div>
+					</div>
+					<!-- Pricing Plan -->
+					<section id="pricing" class="pricing offset">
+						<div class="Pricing-section">
+							<h1>GET STARTED</h1>
+							<h2>Plans & Pricing</h2>
+							<p>Choose the plan that’s right for you</p>
+						</div>
+						<div class="cards">
+							<div class="card shadow">
+								<ul>
+									<li class="pack" style="color: #56d858"><strong>Monthly</strong></li>
+									<li id="professional" class="price bottom-bar" style="color: #56d858">&dollar;69.99</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Advance Trading
+										View Indicatrs
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Automated
+										Trading System
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>VIP Trading
+										System
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Weekly Alt coin
+										Selection
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Weekly Legend
+										Board
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Dashbard
+										Configuration
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Increase
+										Affiliate perks
+									</li>
+									<li><button class="btn active-btn">Get it</button></li>
+								</ul>
+							</div>
+							<div class="card active">
+								<ul>
+									<li class="pack" style="color: #56d858"><strong>Yearly</strong></li>
+									<li id="professional" class="price bottom-bar" style="color: #56d858">&dollar;699.99</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Advance Trading
+										View Indicatrs
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Automated
+										Trading System
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>VIP Trading
+										System
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Weekly Alt coin
+										Selection
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Weekly Legend
+										Board
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Dashbard
+										Configuration
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Increase
+										Affiliate perks
+									</li>
+									<li><button class="btn active-btn">Get it</button></li>
+								</ul>
+							</div>
+							<div class="card shadow">
+								<ul>
+									<li class="pack" style="color: #56d858"><strong>Lifetime</strong></li>
+									<li id="professional" class="price bottom-bar" style="color: #56d858">&dollar;1999.99</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Advance Trading
+										View Indicatrs
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Automated
+										Trading System
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>VIP Trading
+										System
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Weekly Alt coin
+										Selection
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Weekly Legend
+										Board
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Dashbard
+										Configuration
+									</li>
+									<li class="bottom-bar">
+										<i class="fa-regular fa-circle-check" style="color: #56d858; padding-right: 4px"></i>Increase
+										Affiliate perks
+									</li>
+									<li><button class="btn active-btn">Get it</button></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="arrows">
+							<button class="btn-1" id="prevBtn">&lt;</button>
+							<button class="btn-1" id="nextBtn">&gt;</button>
+						</div>
+					</section>
+					<script>
+						const cardsContainer = document.querySelector(".cards");
+						const cards = document.querySelectorAll(".card");
+						const prevBtn = document.getElementById("prevBtn");
+						const nextBtn = document.getElementById("nextBtn");
+						let activeCardIndex = 1; // Start with the middle card as active
+
+						prevBtn.addEventListener("click", () => {
+							moveToPrevCard();
+						});
+
+						nextBtn.addEventListener("click", () => {
+							moveToNextCard();
+						});
+
+						function moveToNextCard() {
+							cards[activeCardIndex].classList.add("moving");
+							activeCardIndex = (activeCardIndex + 1) % cards.length;
+							updateCardClasses();
+						}
+
+						function moveToPrevCard() {
+							cards[activeCardIndex].classList.add("moving");
+							activeCardIndex = (activeCardIndex - 1 + cards.length) % cards.length;
+							updateCardClasses();
+						}
+
+						function updateCardClasses() {
+							cards.forEach((card, index) => {
+								if (index === activeCardIndex) {
+									card.classList.add("active");
+									card.classList.remove("moving");
+								} else {
+									card.classList.remove("active");
+									card.classList.remove("moving");
+								}
+							});
+							updateCardPositions(); // Call the function to update card positions
+						}
+
+						function updateCardPositions() {
+							cards.forEach((card, index) => {
+								const distance = index - activeCardIndex;
+								card.style.transform = `translateZ(${distance * 10}%)`;
+							});
+						}
+
+						// Initial call to update card positions
+						updateCardPositions();
+					</script>
+
+					<div class="card-bl">
+						<p>
+							All payments are secured with SSL Encryption. Cancel anytime in one-click <br />
+							from within your account. Get instant access via email after signing up.
+						</p>
+						<div class="logos4">
+							<img src="./images/stripe.png" alt="" />
+							<img src="./images/card.png" alt="" />
+							<img src="./images/visa.png" alt="visa" />
+							<img src="./images/symbol.png" alt="" />
+						</div>
+						<h1>Safe & Secure Checkout</h1>
+					</div>
+				</div>
+
+				<section id="About" class="About offset">
+					<div class="About-sec">
+						<div>
+							<h1>Who's Behind Alpha Trade?</h1>
+							<p>
+								The Alpha Trade team consists of professional traders and top-tier algorithm <br />developers. Our
+								mission is to assist traders in achieving profitability by creating <br />
+								advanced trading tools that are easily accessible for use across various markets,<br />
+								including coins, stocks, shares, indices, commodities, and more.
+							</p>
+						</div>
+						<div class="img-2">
+							<img class="fo-img" src="./images/founder.webp" alt="" />
+
+							<img class="cto-img" src="./images/cto.webp" alt="" />
+						</div>
+					</div>
+				</section>
+			</section>
+			<div id="footer">
+				<div class="footer-sec">
+					<a href="#index.html">
+						<img src="./images/logo.png" alt="" />
+					</a>
+					<div class="list-1">
+						<ul>
+							<li><a href="#Feature">Features</a></li>
+							<li><a href="#pricing">Pricing</a></li>
+							<li><a href="">Become An Affiliate</a></li>
+							<li><a href="#testimonials">Testimonials</a></li>
+						</ul>
+					</div>
+					<div class="list-2">
+						<ul>
+							<li><a href="#About">About</a></li>
+							<li><a href="#marketing@mdxalgo.com">marketing@mdxalgo.com</a></li>
+						</ul>
+					</div>
+					<div class="list-3">
+						<ul>
+							<li><a href="#">Terms of Service</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="copywright">
+					<p style="color: #c2bfbb">© 2023 Alpha Trade. All Rights Reserved.</p>
+				</div>
+				<hr class="custom-hr" />
+			</div>
+		</section>
+	</body>
+</html>

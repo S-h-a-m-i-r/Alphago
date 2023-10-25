@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard/chart</title>
+    <!-- <link rel="icon" type="image/png" href="../dashboardImages/" /> -->
+		<link rel="stylesheet" href="../Charts//charts.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+    <style>
+      @media (max-width: 768px) {
+        .table-data {
+          margin-left: 0;
+          width: 95%;
+        }
+      
+        .table-data th,
+        .table-data td {
+          padding: 10px;
+          font-size: 5px;
+        }
+      }
+
+
+
+
+
+      </style>
+</head>
+<body>
+
+    <section id="wrapper">
+        <!-- Navbar Section -->
+        <section id="navbar" class="navbar offset">
+            <div class="nav">
+                
+                <a href="#navbar">
+                    <img src="./images/logo.png" alt="" />
+                </a>
+              
+                <div class="menu-bar">
+                    
+                    <ul class="menu-item">
+                        <li>
+                            
+                            <div class="local-time">
+                                <span class="time-label">Time:</span>
+                                <span id="time"></span>
+                            </div>
+                        </li>
+                    
+                            <a href="../../Sign In/signin.html" class="claim-button" style="font-size: 12px;">
+                                <i class="fa-regular fa-square-check" style="font-size: 10px;"></i> claim 30000$
+                            </a>
+                        
+                    </ul>
+                </div>
+               
+                
+                
+                
+                
+                
+                
+                <div class="buttons-container">
+
+                    <div class="button-group">
+                        <h4 class="getAdvFeatures">get advanced features</h4>
+                     
+                    </div>
+                    
+                    <div class="button-group">
+                        <a href="../../index.html" class="custom-button">
+                            <i class="fa-regular fa-square-check" style="font-size: 15px"></i> Dashboard Login
+                        </a>
+                        <span class="divider" style="color: white">|</span>
+                    </div>
+                    <div class="button-group">
+                        <a href="../../Sign Up/signup.html" class="signb">Sign Up</a>
+                        <a href="../../Sign Up/signup.html" class="login">Login In</a>
+                        
+                    </div>
+                   
+                </div>
+           
+            
+        </section>
+        <div class="sidebar">
+          <div class="toggle-btn">
+              <span class="bar">........</span>
+              <span class="bar"></span>
+              <span class="cross-bar"></span>
+          </div>
+          <div class="menu-sidebar" style="margin-top: 100px;">
+              <ul class="menu-list">
+                  <li>
+                      <a href="https://www.discord.com" class="menu-link">
+                          <i class="fab fa-discord"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com" class="menu-link" style="margin-left: 5px;">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  
+    
+      <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const sidebar = document.querySelector('.sidebar');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+    <script>
+        function updateLocalTime() {
+            const timeElement = document.getElementById("time");
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const formattedTime = `${hours}:${minutes}:${seconds}`;
+            timeElement.textContent = formattedTime;
+        }
+
+        // Update local time every second
+        setInterval(updateLocalTime, 1000);
+    </script>
+
+
+
+<!-- ticker section and header section  -->
+<section class="ticker-section" style="background-color: rgb(66, 62, 62);">
+    <div class="ticker">
+        <div class="ticker container">
+          <ul  class="ticker-list">
+            <li>
+                <a href="#" style="color: white; text-decoration: none;">Bitcoin Surges to New Heights: $23,611.59</a>
+            </li>
+            <span class="divider" style="color: white">|</span>
+            <li>
+                <a href="#" style="color: white; text-decoration: none;">Binance Coin Reaches All-Time High: $292.00</a>
+            </li>
+            <span class="divider" style="color: white">|</span>
+            <li>
+                <a href="#" style="color: white; text-decoration: none;">Cardano's ADA Showing Promise: $0.28</a>
+            </li>
+            <span class="divider" style="color: white">|</span>
+            <li>
+                <a href="#" style="color: white; text-decoration: none;">DOGE Community Excited: $0.07</a>
+            </li>
+            <span class="divider" style="color: white">|</span>
+            <li>
+                <a href="#" style="color: white; text-decoration: none;">Ethereum's Price Holds Steady: $1,892.59</a>
+            </li>
+            <span class="divider" style="color: white">|</span>
+            <li>
+                <a href="#" style="color: white; text-decoration: none;">Litecoin Sees Incremental Growth: $79.47</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <script>
+        const tickerContainer = document.querySelector(".ticker-container");
+        const tickerList = document.querySelector(".ticker-list");
+
+        tickerList.innerHTML += tickerList.innerHTML; // Duplicate the ticker items
+
+        // Measure the total width of the ticker items
+        const totalWidth = tickerList.offsetWidth;
+
+        // Set the width of the ticker container
+        tickerContainer.style.width = `${totalWidth}px`;
+    </script>
+</section>
+<section class="main-header" style="background-color: black;">
+<section class="header-section">
+    <div class="header-bar">
+        <ul class="header-item">
+            <li><a href="../Charts/charts.html">charts</a></li>
+            <li><a href="../Coins/coins.html">coins</a></li>
+        </ul>
+    </div>
+    </section>
+    <section class="edit-buttons">
+    <div class="side-buttons">
+        <a href="#" class="edit-button">edit mode</a>
+        <a href="#" class="refresh"> <i class="fa-sharp fa-solid fa-rotate-right"></i></i></a>
+    </div>
+
+</section>
+
+
+</section>
+<section class="main-header" style="background-color: black;">
+  <section class="header-section">
+      <div class="header-bar">
+          <ul class="header-item">
+            <li style="position: relative;">
+              <a href="#" style="padding-right: 20px;">show 25 <i class="fa-sharp fa-solid fa-caret-down"></i> entries</a>
+              <ul style="position: absolute; top: 100%; left: 0; background-color: white; border: 1px solid #ccc; padding: 0; margin: 0; display: none;">
+                <!-- Dropdown content -->
+                <li style="list-style: none;"><a href="#" style="display: block; padding: 0.5rem 1rem; text-decoration: none; color: #333;">10 entries</a></li>
+                <li style="list-style: none;"><a href="#" style="display: block; padding: 0.5rem 1rem; text-decoration: none; color: #333;">25 entries</a></li>
+                <li style="list-style: none;"><a href="#" style="display: block; padding: 0.5rem 1rem; text-decoration: none; color: #333;">50 entries</a></li>
+              </ul>
+            </li>
+             
+          </ul>
+      </div>
+      </section>
+      <section class="edit-buttons2" style=" border: 1px solid rgb(86, 245, 105); padding: 86x; width: 200px; border-radius: 8px; text-align: center;">
+        <div class="side-buttons2">
+          <a href="#" class="edit-button2">
+            <i class="fa-sharp fa-solid fa-search" style="font-size: 17px; color: gray;"></i>
+            <span style="margin-left: 5px; font-size: 20px; color: gray;">search</span>
+          </a>
+        </div>
+      </section>
+  
+  
+  </section>
+
+<div class="divider2"></div>
+
+<!-- info section  -->
+
+
+
+
+
+           
+</div> 
+
+</section>
+
+
+
+<div class="class crypto-table">
+  <table class="table-data" style="margin-left: 10px; border-collapse: collapse;
+           background-color: rgb(38, 36, 36);
+           color: white;
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+           ">
+
+    <thead class="thead">
+        <tr >
+            <th  style="padding: 15px;
+                        text-align: center; width: 300px;
+                        background-color: black;
+                        border-bottom: 1px solid white;">coins</th>
+            <th style="padding: 15px;
+                        text-align: center; width:200px;
+                        background-color: black;
+                        border-bottom: 1px solid white;"> market cap</th>
+            <th style="padding: 15px;
+                        text-align: center;  width:200px;
+                        background-color: black;
+                        border-bottom: 1px solid white;">volumn 24</th>
+            <th style="padding: 15px;
+                        text-align: center;  
+                        background-color: black; width:200px;
+                        border-bottom: 1px solid white;">price</th>
+            <th style="padding: 15px;
+                        text-align: center;
+                        background-color: black;  width:200px;
+                        border-bottom: 1px solid white;">change 1H</th>
+            <th style="padding: 15px;
+                        text-align: center;
+                        background-color: black;  width:200px;
+                        border-bottom: 1px solid white;">change 24H</th>
+            <th style="padding: 15px;
+                        text-align: center;
+                        background-color: black;  width:200px;
+                        border-bottom: 1px solid white;">change 7D</th>
+          </tr>
+          
+    </thead>
+    <body class="tbody">
+      <!-- Repeat these rows with your data -->
+      <tr>
+        <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 1</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 2</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 3</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 4</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 5</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 6</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 7</td>
+          </tr>
+        
+          <!-- Add more rows here with incrementing data -->
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 8</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 9</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 10</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 11</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 12</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 13</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 14</td>
+          </tr>
+
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 1</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 2</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 3</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 4</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 5</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 6</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 7</td>
+          </tr>
+        
+          <!-- Add more rows here with incrementing data -->
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 8</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 9</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 10</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 11</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 12</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 13</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 14</td>
+          </tr>
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 1</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 2</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 3</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 4</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 5</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 6</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 7</td>
+          </tr>
+        
+          <!-- Add more rows here with incrementing data -->
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 8</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 9</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 10</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 11</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 12</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 13</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 14</td>
+          </tr>
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 1</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 2</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 3</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 4</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 5</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 6</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 7</td>
+          </tr>
+        
+          <!-- Add more rows here with incrementing data -->
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 8</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 9</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 10</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 11</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 12</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 13</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 14</td>
+          </tr>
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 1</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 2</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 3</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 4</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 5</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 6</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 7</td>
+          </tr>
+        
+          <!-- Add more rows here with incrementing data -->
+          <tr>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 8</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 9</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 10</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 11</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 12</td>
+            <td style="padding: 15px; text-align: center; background-color: #6e6d6d; color: white;">Data 13</td>
+            <td style="padding: 15px; text-align: center; background-color: #383838; color: white;">Data 14</td>
+          </tr>
+      </tr>
+      <!-- Repeat more rows as needed -->
+    </body>
+  </table>
+      </section>
+          
+</body>
+</html>

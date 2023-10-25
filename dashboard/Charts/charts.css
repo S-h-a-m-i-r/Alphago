@@ -1,0 +1,1028 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+	margin: 0;
+	/* padding: 0; */
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+.offset::before {
+	display: block;
+	content: "";
+	/* height: 1rem; */
+	/* margin-top: -2rem; */
+}
+a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.7rem;
+}
+
+li {
+	list-style: none;
+}
+
+/* upper bar csss */
+/* Discount bar styles (assuming it should also be responsive) */
+
+/* Navbar styles */
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 4rem;
+	width: 100%;
+	background-color: #343333;
+	transition: all 0.5s ease;
+	justify-content: left;
+}
+.nav .scrolled {
+	background-color: white !important;
+	transition: background-color 200ms linear;
+	box-shadow: 7rem 10rem 15rem rgba(0, 0, 0, 0.3);
+}
+
+.nav ul li a:after {
+	content: "";
+
+	height: 3%;
+
+	transition: 0.3s;
+}
+
+.nav ul li a:hover {
+	color: #ffffff;
+}
+
+.nav ul li a:hover:after {
+	width: 0.1%;
+}
+
+.nav .menu-bar .menu-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav .menu-bar .menu-item li {
+	margin: 5px 30px;
+}
+
+.nav .menu-bar .menu-item li a {
+	color: #f0f7f3;
+	font-size: 2vh;
+	font-weight: 60;
+}
+
+.nav .menu-bar .menu-item li a:hover {
+	color: #56d858;
+}
+
+.nav .nav-social ul li a {
+	font-size: 12px;
+	color: #56d858;
+}
+/* .nav img {
+	height: 100vh;
+	width: 100vh;
+} */
+/* Basic button styles */
+
+.buttons-container {
+	display: flex;
+	justify-content: flex-end; /* Align buttons to the right */
+	align-items: center; /* Center vertically within the container */
+	padding: 1px, 2px, 2px; /* Add padding for spacing */
+	/* Set background color */
+}
+
+.button-group {
+	margin-left: 100px;
+}
+.getAdvFeatures {
+	font-size: 1rem;
+	color: transparent; /* Set text color to transparent */
+	margin: 0 30px;
+	padding: 0;
+	margin-left: 60vh;
+	background-image: linear-gradient(90deg, #56d858, white); /* Define the gradient */
+	background-clip: text; /* Apply the gradient only to the text */
+	-webkit-background-clip: text; /* For Safari compatibility */
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+}
+.signb,
+.custom-button {
+	font-size: 14px;
+	color: #56d858;
+	background-color: #56d858;
+	border-color: #56d858;
+	border: 0.1rem solid #56d858;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	position: relative; /* Required for pseudo-elements */
+	overflow: hidden; /* Hide overflowing shine */
+}
+
+/* Add the white shine as a pseudo-element */
+
+.signb::before,
+.custom-button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%; /* Start the shine off-screen */
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, white, transparent); /* Define the gradient */
+	transform: skewX(-20deg); /* Add skew to the shine */
+	opacity: 0;
+	transition: left 0.5s ease, opacity 0.5s ease; /* Transition the left position and opacity */
+}
+
+/* Button hover effect */
+
+.signb:hover::before,
+.custom-button:hover::before {
+	left: 100%; /* Move the shine to the right */
+	opacity: 1;
+}
+.login:hover {
+	background-color: #56d858;
+	border-color: #56d858;
+}
+
+.login {
+	font-size: 14px;
+	color: #eef2ee;
+	background-color: #0a0a0a;
+
+	border: 0.1rem solid #56d858;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.claim-button:hover {
+	background-color: #56d858;
+	border-color: #56d858;
+}
+
+.claim-button {
+	color: #eef2ee;
+	background-color: #0a0a0a;
+
+	border: 0.1rem solid #56d858;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+/* for the menu dashbopard and sign up button style*/
+
+.dash-buttons {
+	display: flex;
+	margin-left: 20%;
+	align-items: center;
+}
+.claim-button,
+.signb,
+.login,
+.custom-button {
+	margin-right: 5px; /* Adjust this value as needed */
+	padding: 10px 20px;
+
+	color: #fff;
+	border-radius: 5px;
+	text-decoration: none;
+}
+@media (max-width: 768px) {
+	/* Adjust navbar height, padding, or other styles */
+	.navbar {
+	}
+
+	/* Center align logo */
+	.nav a img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	/* Center align claim button */
+	.claim-button {
+		display: block;
+		text-align: center;
+		font-size: 12px;
+		margin: 10px auto;
+	}
+
+	/* Adjust button groups */
+	.button-group {
+		/* For example: */
+		margin: 5px auto;
+		text-align: center;
+	}
+
+	/* Adjust login and sign up links */
+	.signb,
+	.login {
+		display: block;
+		margin: 5px auto;
+	}
+
+	/* Adjust the font size of getAdvFeatures */
+	.getAdvFeatures {
+		font-size: 12px;
+	}
+
+	@media (max-height: 1300px) {
+		.nav .menu-bar .menu-item li,
+		.nav .custom-button,
+		.nav .signb,
+		.getAdvFeatures {
+			display: none;
+		}
+	}
+}
+
+.buttons-container {
+	display: flex;
+	justify-content: flex-end; /* Align items to the right */
+}
+
+.button-group {
+	display: flex;
+	align-items: center;
+	margin-left: 10px; /* Add margin between button groups */
+}
+
+.divider {
+	margin: 0 5px;
+	color: white;
+}
+
+.local-time {
+	display: flex;
+	align-items: center;
+	font-family: Orbitron;
+	color: white;
+}
+
+.time-label {
+	margin-right: 0.5rem;
+}
+
+/*for the stiky side bar*/
+
+.sidebar {
+	top: 0;
+	position: fixed;
+	left: -250px; /* Initially hide the sidebar */
+	width: 300px;
+	height: 100%;
+	background-color: #333;
+	color: white;
+	transition: left 0.3s ease;
+	z-index: 999;
+}
+
+.menu-sidebar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Vertically center the items */
+	margin-left: 260px;
+	height: 50%; /* Make sure the sidebar has full height */
+	background-color: #333;
+	color: white;
+	transition: left 0.3s ease;
+	z-index: 999;
+}
+@media (max-width: 768px) {
+	.sidebar {
+		left: -250px; /* Initially hide the sidebar */
+		width: 30px;
+		height: 100%;
+		background-color: #333;
+		color: white;
+		transition: left 0.3s ease;
+		z-index: 999;
+	}
+	@media (max-height: 1300px) {
+		.sidebar .menu-sidebar .menu-list li a {
+			display: none;
+		}
+	}
+
+	.menu-list li a {
+	}
+
+	.menu-link {
+		/* Adjust menu link styles for smaller screens */
+		/* You might change font size or padding */
+	}
+	.menu-list li a {
+		text-decoration: none;
+		color: white; /* Adjust the text color as needed */
+		display: flex;
+
+		font-size: 6px;
+		margin-right: 200px;
+	}
+
+	.fab {
+		font-size: 16px;
+	}
+}
+.menu-sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+
+.menu-sidebar li {
+	margin: 10px 0;
+}
+.menu-list li a {
+	text-decoration: none;
+	color: white; /* Adjust the text color as needed */
+	display: flex;
+
+	font-size: 26px;
+}
+.menu-sidebar li i {
+}
+
+.menu-sidebar li span {
+	display: none; /* Hide the text by default */
+}
+
+.toggle-btn {
+	position: absolute;
+	top: 20px;
+	left: 260px;
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 30px;
+	height: 4px;
+	margin: 6px 0;
+	background-color: white;
+	transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+	left: 0; /* Show the sidebar */
+}
+
+.sidebar.open .menu-sidebar li span {
+	display: contents; /* Show text when sidebar is open */
+}
+
+.sidebar.open .toggle-btn .bar {
+	transform: rotate(-45deg) translate(-2px, -2px);
+	background-color: rgb(85, 184, 15);
+}
+
+.sidebar.open .toggle-btn .cross-bar {
+	display: block;
+	transform: rotate(45deg) translate(-2px, -2px);
+	background-color: rgb(85, 184, 15);
+}
+.menu-text {
+	display: flex;
+
+	margin-top: 20px;
+	font-size: 10px;
+	/* Add spacing between icon and text */
+}
+
+/* ticker  part */
+
+/* Style for the ticker section */
+.ticker-section {
+	background-color: #333;
+	color: white;
+	padding: 5px 0;
+	overflow: hidden;
+}
+
+/* Style for the ticker container */
+.ticker {
+	overflow: hidden;
+	white-space: nowrap;
+	display: flex;
+	animation: tickerScroll linear infinite; /* Adjust speed as needed */
+}
+
+/* Animation for scrolling the ticker */
+@keyframes tickerScroll {
+	0% {
+		transform: translateX(10%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+.ticker-container {
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Style for the ticker list items */
+.ticker-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block; /* Display the list items horizontally */
+	animation: tickerScroll 20s linear infinite;
+}
+
+.ticker-list li {
+	display: inline;
+	margin-right: 20px; /* Add spacing between ticker items */
+	padding: 10px; /* Add padding for better visibility */
+	border-bottom: 2px solid transparent; /* Add a border line between items */
+	transition: border-color 0.3s;
+}
+.ticker-list li a {
+	font-size: 15px;
+}
+
+/* Style for header 2 */
+.main-header {
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	height: 100px;
+}
+
+.header-bar {
+	display: flex;
+	align-items: center;
+}
+
+.header-item {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 5px;
+}
+
+.header-item li a {
+	text-decoration: none;
+	color: rgb(189, 187, 187);
+	position: relative; /* Add this */
+	font-size: 16px;
+	margin-left: 100px;
+	transition: color 0.3s;
+}
+.header-item li a:hover {
+	color: rgb(255, 255, 255); /* Change color on hover */
+}
+.header-item li a:hover::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -20px; /* Adjust the distance of the line from text */
+	width: 100%;
+	height: 1.5px;
+	background-color: rgb(128, 237, 88);
+}
+.edit-buttons {
+	display: flex;
+
+	gap: 10px;
+}
+
+.side-buttons {
+}
+
+.edit-button,
+.refresh {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	padding: 5px 10px;
+	border: 1px solid rgb(86, 245, 105);
+	border-radius: 5px;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+}
+
+@media (max-width: 768px) {
+	.main-header {
+		background-color: black;
+		display: flex;
+		flex-direction: row; /* Change to column on smaller screens */
+		align-items: center;
+		padding: 10px 2px;
+		height: auto; /* Change height to auto for smaller screens */
+	}
+
+	.header-bar {
+		display: flex;
+		flex-direction: row; /* Change to column on smaller screens */
+		align-items: center;
+		margin-bottom: -5px; /* Add margin to separate items */
+	}
+
+	.header-item {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: row; /* Change to column on smaller screens */
+		gap: 5px;
+		margin-left: 60px;
+	}
+
+	.header-item li a {
+		text-decoration: none;
+		color: rgb(189, 187, 187);
+		position: relative;
+		font-size: 10px;
+		margin: 0; /* Remove left margin */
+		text-align: center; /* Center text */
+		transition: color 0.3s;
+	}
+	.header-item li a:hover {
+		color: rgb(255, 255, 255);
+	}
+	.header-item li a:hover::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -1px; /* Adjust the distance of the line from text for smaller screens */
+		width: 100%;
+		height: 1.5px;
+		background-color: rgb(128, 237, 88);
+	}
+
+	.edit-buttons {
+		display: flex;
+		flex-direction: row; /* Change to column on smaller screens */
+		align-items: center;
+		gap: 0px;
+		margin-top: 5px; /* Add margin to separate items */
+	}
+
+	.side-buttons {
+		display: flex;
+		flex-direction: row; /* Change to column on smaller screens */
+		align-items: center;
+	}
+
+	.edit-button,
+	.refresh {
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+		padding: 5px 10px;
+		border: 1px solid rgb(86, 245, 105);
+		border-radius: 5px;
+		display: inline-block;
+		text-align: center;
+		font-size: 6px;
+	}
+}
+
+.divider2 {
+	width: 100%;
+	height: 1px;
+	background-color: rgb(245, 242, 242);
+}
+
+/*info section */
+
+.info-section {
+	display: flex;
+	background-color: black;
+	padding: 20px;
+}
+
+.major-div {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-right: 20px;
+}
+
+/* Responsive styles for screens with width 768px or less */
+@media (max-width: 768px) {
+	.info-section {
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+
+	.major-div {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}
+
+.row1 {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.div1,
+.div2,
+.div3,
+.div7 {
+	height: 100px;
+	background-color: rgb(60, 60, 60);
+	border-radius: 10px;
+}
+
+.div1 {
+	width: 650px;
+}
+
+.div2 {
+	width: 410px;
+}
+
+.div1,
+.div3,
+.div7 {
+	margin-left: 50px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+	.row1 {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.div1,
+	.div2,
+	.div3,
+	.div7 {
+		width: 74%;
+		margin-left: 0;
+		margin-top: 10px;
+	}
+}
+
+.row2,
+.row3 {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+.row4 {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.div3,
+.div4,
+.div5,
+.div6 {
+	height: 120px;
+	width: 82%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 10px;
+}
+
+.div8 {
+	height: 280px;
+	width: 530px;
+	background-color: rgb(60, 60, 60);
+	border-radius: 10px;
+}
+.div9 {
+	width: 500px; /* Set the width of the parent div */
+	/* Set the height of the parent div */
+	background-size: contain; /* Cover the entire div with the background image */
+	background-position: center; /* Center the background image */
+	background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+	.row2,
+	.row3,
+	.row4 {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		align-items: center;
+	}
+
+	.div3,
+	.div4,
+	.div5,
+	.div6,
+	.div8,
+	.div9 {
+		width: 100%; /* Full width for smaller screens */
+		background-color: rgb(60, 60, 60);
+		border-radius: 10px;
+		justify-content: center;
+		width: 74%;
+	}
+
+	.div9 {
+		height: auto; /* Automatically adjust height based on content */
+		background-size: cover; /* Cover the entire div with the background image */
+		background-position: center; /* Center the background image */
+		background-repeat: no-repeat;
+		justify-content: center;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		/* Prevent image repetition */
+	}
+}
+
+/*styling for wach individual row */
+
+.class.div1 {
+	background-color: rgb(60, 60, 60);
+	display: flex;
+	gap: 10px;
+}
+.class.div2 {
+	background-color: rgb(60, 60, 60);
+	display: flex;
+	gap: 10px;
+
+	justify-content: center;
+}
+
+.item-list {
+	list-style: none;
+	display: flex;
+	gap: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+.item-list li {
+	background-color: transparent;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.item-list li span {
+	font-size: 13px;
+}
+
+.name {
+	font-weight: bold;
+	color: gray;
+	font-size: 13px;
+}
+
+.value {
+	font-weight: normal;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+@media (max-width: 768px) {
+	.item-list li {
+		width: 12%; /* Full width for smaller screens */
+	}
+	.item-list li span {
+		font-size: 5px; /* Full width for smaller screens */
+	}
+}
+
+/* Common styles for .name */
+.name {
+	font-weight: bold;
+	color: gray;
+	font-size: 7px;
+}
+
+/* Common styles for .value */
+.value {
+	font-weight: normal;
+	margin-top: 1px; /* Adjust margin for smaller screens */
+	font-size: 7px;
+}
+
+.class.div3,
+.class.div4,
+.class.div5,
+.class.div6 {
+	background-color: rgb(60, 60, 60);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 10px;
+	height: 100px;
+	color: white;
+	font-size: 15px;
+}
+
+.icon {
+	width: 20px;
+}
+
+.setting-icon {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: gray;
+}
+
+h5 {
+	margin: 0;
+	color: white;
+}
+
+.text {
+	color: white;
+}
+
+.value {
+	font-weight: bold;
+}
+
+.market-value {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	/* Your additional styling */
+}
+
+.upper-left-text {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	font-size: 15px;
+	color: white;
+}
+
+.upper-right-icons {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: flex;
+	gap: 5px;
+	color: white;
+}
+
+.upper-right-icons i {
+	font-size: 20px;
+}
+.class.div7 {
+	height: 280px;
+	width: 530px;
+	background-color: rgb(60, 60, 60);
+	border-radius: 10px;
+	position: relative;
+}
+
+.bars {
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.bar {
+	width: 100%;
+}
+.row {
+	display: flex;
+
+	gap: 50px; /* Adjust the gap as needed */
+}
+
+.bars-container {
+	display: flex;
+	flex-direction: column;
+
+	gap: 50px; /* Adjust the gap as needed */
+	height: 100%; /* Make sure it takes full height */
+}
+
+.bar-container {
+	gap: 500px;
+
+	/* Adjust the gap between bars and text-value */
+}
+
+.text-value {
+	font-size: 13px;
+	color: white;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+	.class.div7 {
+		height: auto; /* Auto height for smaller screens */
+		width: 220%; /* Full width for smaller screens */
+		background-color: rgb(60, 60, 60);
+		border-radius: 10px;
+		position: relative;
+	}
+
+	.bars {
+		display: flex;
+		flex-direction: column;
+		gap: 20px; /* Adjust the gap for smaller screens */
+		position: static; /* Remove absolute positioning */
+		bottom: auto;
+	}
+
+	.row {
+		display: flex;
+		flex-direction: column; /* Stack rows on smaller screens */
+		gap: 10px; /* Adjust the gap for smaller screens */
+	}
+
+	.bars-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px; /* Adjust the gap for smaller screens */
+		height: auto;
+
+		/* Auto height for smaller screens */
+	}
+	.bar-container {
+		max-width: 250px; /* Adjust the maximum width for smaller screens */
+		margin: 0 auto; /* Center the bar-container horizontally */
+	}
+
+	.bar {
+		width: 100%; /* Make the bar container full width */
+	}
+
+	.bar span {
+		font-size: 2px; /* Adjust font size for smaller screens */
+	}
+
+	.bar-container .text-value {
+		font-size: 7px; /* Adjust font size for smaller screens */
+		color: white;
+	}
+}
+
+/* Original styles */
+.class.div7 {
+	height: 280px;
+	width: 72%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 10px;
+	position: relative;
+}
+
+.bars {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	width: 50%;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	gap: 20px; /* Adjust the gap as needed */
+}
+
+.bars-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px; /* Adjust the gap as needed */
+	height: 100%; /* Make sure it takes full height */
+}
+
+.bar-container {
+	display: flex;
+	align-items: center;
+	gap: 20px; /* Adjust the gap between bars and text-value */
+}
+
+.text-value {
+	font-size: 13px;
+	color: white;
+}

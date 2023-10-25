@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>dashboard/chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <link rel="icon" type="image/png" href="../dashboardImages/" /> -->
+		<link rel="stylesheet" href="../Charts//charts.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+       
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="toggle-btn">
+        <span class="bar">........</span>
+        <span class="bar"></span>
+        <span class="cross-bar" ></span>
+    </div>
+    <div class="menu-sidebar" style="margin-top: 100px">
+        <ul class="menu-list">
+            <li>
+                <a href="https://www.discord.com" class="menu-link">
+                    <i class="fab fa-discord"></i>
+                  
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" class="menu-link">
+                    <i class="fab fa-instagram" style="margin-left: 5px; "></i>
+                
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const sidebar = document.querySelector('.sidebar');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+   </script>
+
+    <section id="wrapper">
+        <!-- Navbar Section -->
+            <section id="navbar" class="navbar offset" >
+                <div class="nav">
+                    
+                    <a href="#navbar">
+                        <img src="./images/logo.png" alt="" />
+                    </a>
+                
+                    <div class="menu-bar">
+                        
+                        <ul class="menu-item">
+                            <li>
+                                
+                                <div class="local-time">
+                                    <span class="time-label">Time:</span>
+                                    <span id="time"></span>
+                                </div>
+                            </li>
+                        
+                                <a href="../../Sign In/signin.html" class="claim-button" style="font-size: 12px;">
+                                    <i class="fa-regular fa-square-check" style="font-size: 10px;"></i> claim 30000$
+                                </a>
+                            
+                        </ul>
+                    </div>
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="buttons-container">
+
+                        <div class="button-group">
+                            <h4 class="getAdvFeatures">get advanced features</h4>
+                        
+                        </div>
+                        
+                        <div class="button-group">
+                            <a href="../../index.html" class="custom-button">
+                                <i class="fa-regular fa-square-check" style="font-size: 15px"></i> Dashboard Login
+                            </a>
+                            <span class="divider" style="color: white">|</span>
+                        </div>
+                        <div class="button-group">
+                            <a href="../../Sign Up/signup.html" class="signb">Sign Up</a>
+                            <a href="../../Sign Up/signup.html" class="login">Login In</a>
+                            
+                        </div>
+                    
+                    </div>
+      
+
+                </div>  
+            </section>
+
+            
+        
+
+       
+        <script>
+            function updateLocalTime() {
+                const timeElement = document.getElementById("time");
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+        
+                const formattedTime = `${hours}:${minutes}:${seconds}`;
+                timeElement.textContent = formattedTime;
+            }
+        
+            // Update local time every second
+            setInterval(updateLocalTime, 1000);
+        </script>
+       <section class="ticker-section" style="background-color: rgb(66, 62, 62);">
+        <div class="ticker">
+            <div class="ticker-container" onmouseover="pauseTicker()" onmouseout="resumeTicker()">
+                <ul class="ticker-list">
+                        <li>
+                            <a href="#" style="color: white; text-decoration: none;">Bitcoin Surges to New Heights: $23,611.59</a>
+                        </li>
+                        <span class="divider" style="color: white">|</span>
+                        <li>
+                            <a href="#" style="color: white; text-decoration: none;">Binance Coin Reaches All-Time High: $292.00</a>
+                        </li>
+                        <span class="divider" style="color: white">|</span>
+                        <li>
+                            <a href="#" style="color: white; text-decoration: none;">Cardano's ADA Showing Promise: $0.28</a>
+                        </li>
+                        <span class="divider" style="color: white">|</span>
+                        <li>
+                            <a href="#" style="color: white; text-decoration: none;">DOGE Community Excited: $0.07</a>
+                        </li>
+                        <span class="divider" style="color: white">|</span>
+                        <li>
+                            <a href="#" style="color: white; text-decoration: none;">Ethereum's Price Holds Steady: $1,892.59</a>
+                        </li>
+                        <span class="divider" style="color: white">|</span>
+                        <li>
+                            <a href="#" style="color: white; text-decoration: none;">Litecoin Sees Incremental Growth: $79.47</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                let tickerAnimation; // Store the ticker animation
+        
+                // Pause the ticker animation
+                function pauseTicker() {
+                    clearInterval(tickerAnimation);
+                }
+        
+                // Resume the ticker animation
+                function resumeTicker() {
+                    tickerAnimation = setInterval(moveTicker, 10); // Adjust the interval as needed
+                }
+        
+                // Move the ticker
+                function moveTicker() {
+                    const tickerContainer = document.querySelector(".ticker-container");
+                    tickerContainer.style.transform = `translateX(${tickerContainer.style.transform
+                        ? parseFloat(tickerContainer.style.transform.match(/-?\d+/)[0]) - 2
+                        : 0}px)`;
+        
+                    // Reset position when fully moved
+                    if (parseFloat(tickerContainer.style.transform.match(/-?\d+/)[0]) <= -tickerContainer.offsetWidth / 5) {
+                        tickerContainer.style.transform = "translateX(0)";
+                    }
+                }
+        
+                // Start the ticker animation
+                tickerAnimation = setInterval(moveTicker, 20); // Adjust the interval as needed
+            </script>
+        </section>
+       <section class="main-header" style="background-color: black;">
+        <section class="header-section">
+            <div class="header-bar">
+                <ul class="header-item">
+                    <li><a href="#About">charts</a></li>
+                    <li><a href="../Coins/coins.html">coins</a></li>
+                </ul>
+            </div>
+            </section>
+            <section class="edit-buttons">
+            <div class="side-buttons">
+                <a href="#" class="edit-button">edit mode</a>
+                <a href="#" class="refresh"> <i class="fa-sharp fa-solid fa-rotate-right"></i></i></a>
+            </div>
+        
+        </section>
+    
+    
+    </section>
+       
+        <div class="divider2"></div>
+
+
+
+        <!-- /*info section */ -->
+
+
+        <section class="info-section">
+            <div class="major-div">
+                <div class="row1">
+                    <div class="class div1">
+                        <ul class="item-list">
+                            <li><span class="name">GLOBAL MARKET CAP</span><span class="value">$1.1 t</span></li>
+                            <li><span class="name">BTC MARKET CAP</span><span class="value">$507.4 b</span></li>
+                            <li><span class="name">BTC DOMINANCE</span><span class="value">46.3 %</span></li>
+                            <li><span class="name">ETH DOMINANCE</span><span class="value">18.2 %</span></li>
+                        </ul>
+                    </div>
+                    <div class="class div2" style="background-color:  rgb(60, 60, 60);">
+                        <ul class="item-list">
+                            <li><span class="name">DAILY
+                            </span><span class="value">0.63%</span></li>
+                            <li><span class="name">WEEKLY</span><span class="value">-11.25%</span></li>
+                            <li><span class="name">MONTHLY</span><span class="value">-12.57%
+                            </span></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="class div3">
+                        <div class="setting-icon"><i class="fa fa-gear"></i></div>
+                       
+                        <div style="display: flex; align-items: center; ">
+                            <img src="../../images/bitcoin.png" style="height: 20px; vertical-align: middle; margin-right: 5px;" class="icon" />
+                            <span style="vertical-align: middle;">BITCOIN</span>
+                        </div>
+                        <div class="text">
+                            <div class="name">BTC</div>
+                            <div class="value">$23611.59</div>
+                        </div>
+                        
+                    </div>
+                    <div class="class div4" style="background-color:   rgb(60, 60, 60);">
+                        <div class="setting-icon"><i class="fas fa-cog"></i></div>
+                       
+                        <div style="display: flex; align-items: center; ">
+                            <img src="../../images/binance.png" style="height: 20px; vertical-align: middle; margin-right: 5px;" class="icon" />
+                            <span style="vertical-align: middle;">BINANCE</span>
+                        </div>
+                        <div class="text">
+                            <div class="name">BNB</div>
+                            <div class="value">$411.59</div>
+                        </div>
+                       
+                    </div>
+                    <div class="class div5" style="background-color:   rgb(60, 60, 60);">
+                        <div class="setting-icon"><i class="fas fa-cog"></i></div>
+                       
+                        <div style="display: flex; align-items: center; ">
+                            <img src="../../images/dogecoin.png" style="height: 20px; vertical-align: middle; margin-right: 5px;" class="icon" />
+                            <span style="vertical-align: middle;">DOGE-COIN</span>
+                        </div>
+                        <div class="text">
+                            <div class="name">DOGE</div>
+                            <div class="value">$21.59</div>
+                        </div>
+                    </div>
+                    <div class="class div6" style="background-color:   rgb(60, 60, 60);">
+                        <div class="setting-icon"><i class="fas fa-cog"></i></div>
+                       
+                        <div style="display: flex; align-items: center; ">
+                            <img src="../../images/ethereum.png" style="height: 20px; vertical-align: middle; margin-right: 5px;" class="icon" />
+                            <span style="vertical-align: middle;">ETHIRIUM</span>
+                        </div>
+                        <div class="text">
+                            <div class="name">ETH</div>
+                            <div class="value">$911.59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row3">
+                    <div class="class div7" style="background-color: rgb(60, 60, 60); position: relative;">
+                        <div class="upper-left-text">BTC LONG/SHORT -24h</div>
+                        <div class="upper-right-icons">
+                            <i class="fas fa-clock"></i>
+                            <i class="fas fa-redo-alt"></i>
+                        </div>
+                        <div class="bars-container">
+                            <div class="bar-container">
+                                <div class="bar" style="background: linear-gradient(to right, green 71.55%, gray 28.45%); height: 25px; width: 350px; border-radius: 5px; position: relative; font-size: 13px; margin-right: 100px;">
+                                    <span style="position: absolute; left: 50px; top: 0;">71.55%</span>
+                                    <span style="position: absolute; right: 5px; top: 0; color: rgb(237, 234, 234)">28.45%</span>
+                                </div>
+                                <div class="text-value">Binance (Retail) - 2.23</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar" style="background: linear-gradient(to right, green 56.29%, gray 43.71%); height: 25px; width: 350px; border-radius: 5px; position: relative; font-size: 13px ; margin-right: 60px;">
+                                    <span style="position: absolute; left: 50px; top: 0;">56.29%</span>
+                                    <span style="position: absolute; right: 5px; top: 0; color: rgb(237, 234, 234)">43.71%</span>
+                                </div>
+                                <div class="text-value">Binance (Top Traders) - 1.19</div>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar" style="background: linear-gradient(to right, green 52.08%, gray 49.92%); height: 25px; width: 350px; border-radius: 5px; position: relative; font-size: 13px; margin-right: 120px">
+                                    <span style="position: absolute; left: 50px; top: 0;">52.08%</span>
+                                    <span style="position: absolute; right: 5px; top: 0; color: rgb(237, 234, 234)">49.92%</span>
+                                </div>
+                                <div class="text-value">Bybit (Both) - 0.92</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="class div8" style="background-color: rgb(60, 60, 60);">
+                        <canvas id="myChart"></canvas>
+                      </div>
+                      <script>
+                        // Get the canvas element
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                      
+                        // Generate random data
+                        var labels = ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 7', 'Label 8', 'Label 9', 'Label 10', 'Label 11','Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 7', 'Label 8', 'Label 9', 'Label 10', 'Label 11','Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 7', 'Label 8', 'Label 9', 'Label 10', 'Label 11','Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 7', 'Label 8', 'Label 9', 'Label 10', 'Label 11','Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 7', 'Label 8', 'Label 9', 'Label 10', 'Label 11'];
+                        var data = [];
+                        var colors = []; // Array to store random colors
+                        for (var i = 0; i < labels.length; i++) {
+                          data.push(Math.random() * 1000); // Generate random values
+                          colors.push(getRandomColor()); // Generate random colors
+                        }
+                      
+                        function getRandomColor() {
+                          var letters = '0123456789ABCDEF';
+                          var color = '#';
+                          for (var i = 0; i < 6; i++) {
+                            color += letters[Math.floor(Math.random() * 12  )];
+                          }
+                          return color;
+                        }
+                      
+                        // Create the chart
+                        var myChart = new Chart(ctx, {
+                          type: 'line', // Choose the chart type (e.g., bar, line, etc.)
+                          data: {
+                            labels: labels,
+                            datasets: [{
+                              label: 'Random Readings',
+                              data: data,
+                              backgroundColor: 'rgba(0, 0, 0, 0.2)', // Set a transparent background color
+                              borderColor: colors, // Assign random colors
+                              borderWidth: 1,
+                            }],
+                          },
+                          options: {
+                            responsive: true, // Make the chart responsive
+                            scales: {
+                              y: {
+                                beginAtZero: true, // Start the Y-axis at zero
+                              },
+                            },
+                          },
+                        });
+                      </script>
+
+                </div>
+            </div>
+            <div class="div9" style="background-image: url('../../images/Screenshot (329).png');">
+            </div>
+        </section>
+          
+</body>
+</html>
